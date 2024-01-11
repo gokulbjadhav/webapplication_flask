@@ -1,0 +1,1 @@
+This Python web application leverages Flask to provide a user-friendly interface for data cleaning tasks. It allows users to upload datasets, perform various data cleaning operations, and download the cleaned data. The application is designed to streamline the data cleaning process and enhance efficiency.
