@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Cleaner</title>
+</head>
+
+
+<body>
+    <h1>Mobile Number Cleaner</h1>
+
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <label for="url">Enter URL:</label>
+            <input type="url" id="url" name="url">
+            <button type="submit" name="action" value="url">Clean from URL</button>
+        </form>
+
+    </div>
+
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" accept=".txt">
+            <button type="submit" name="action" value="file">Clean from File</button>
+        </form>
+    </div>
+
+    <div>
+        <form method="post">
+            <label for="text">Enter Text:</label>
+            <textarea id="text" name="text" rows="4"></textarea>
+            <button type="submit" name="action" value="text">Clean Text</button>
+        </form>
+    </div>
+
+    {% if cleaned_numbers %}
+        <div>
+
+            <p>Cleaned Mobile Numbers:</p>
+            <ul>
+                {% for number in cleaned_numbers %}
+                    <li>{{ number }}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    {% endif %}
+</body>
+</html>
